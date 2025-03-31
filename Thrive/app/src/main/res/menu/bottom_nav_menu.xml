@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:icon="@drawable/baseline_home_24"
+        android:id="@+id/home"/>
+    <item android:title="Jobs"
+        android:icon="@drawable/fontawesome_box_archive_icon"
+        android:id="@+id/jobs"/>
+    <item android:title="AI Assistant"
+        android:icon="@drawable/photoroom_20250307_225840"
+        android:id="@+id/aiassistant"/>
+    <item android:title="Resume"
+        android:icon="@drawable/outline_description_24"
+        android:id="@+id/resume"/>
+    <item android:title="Profile"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:id="@+id/profile"/>
+</menu>
