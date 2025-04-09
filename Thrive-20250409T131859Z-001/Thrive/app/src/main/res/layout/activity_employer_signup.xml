@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_blue"
+    tools:layout_editor_absoluteX="6dp"
+    tools:layout_editor_absoluteY="62dp">
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="310dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="52dp"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/google"
+        android:fontFamily="@font/zenkakugothicnew_medium"
+        android:text="Sign Up with Google"
+        android:textColor="@color/black"
+        android:enabled="true"
+        app:layout_constraintBottom_toTopOf="@+id/SignUpButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox2"
+        app:layout_constraintVertical_bias="0.694" />
+
+    <Button
+        android:id="@+id/SignUpButton"
+        android:layout_width="310dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="52dp"
+        android:backgroundTint="@color/button_color"
+        android:text="Sign Up"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button5" />
+
+    <Button
+        android:id="@+id/LoginButton"
+        android:layout_width="310dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="52dp"
+        android:backgroundTint="@color/button_create"
+        android:text="Login"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SignUpButton" />
+
+    <TextView
+        android:id="@+id/createAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="92dp"
+        android:fontFamily="@font/paytoneone"
+        android:text="Create Account"
+        android:textColor="@color/button_color"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/lastname"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/rounded_border"
+        android:drawableLeft="@drawable/user_circle"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/zenkakugothicnew_medium"
+        android:hint="Last Name"
+        android:padding="15dp"
+
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstname" />
+
+    <EditText
+        android:id="@+id/company_email"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/rounded_border"
+        android:drawableLeft="@drawable/email"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/zenkakugothicnew_medium"
+        android:hint="Company Email"
+        android:padding="15dp"
+
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastname" />
+
+    <EditText
+        android:id="@+id/companyName"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/rounded_border"
+        android:drawableLeft="@drawable/company_name"
+        android:drawablePadding="7dp"
+        android:fontFamily="@font/zenkakugothicnew_medium"
+        android:hint="Company Name"
+        android:padding="15dp"
+
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/company_email" />
+
+    <EditText
+        android:id="@+id/employer_password"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/rounded_border"
+        android:drawableLeft="@drawable/lock"
+        android:drawablePadding="7dp"
+        android:fontFamily="@font/zenkakugothicnew_medium"
+        android:hint="Password"
+        android:padding="15dp"
+
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/companyName" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="309dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="52dp"
+        android:fontFamily="@font/zenkakugothicnew_medium"
+        android:text="By checking the box, you accept the Terms of User and Privacy Policy."
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/employer_password" />
+
+    <EditText
+        android:id="@+id/firstname"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/rounded_border"
+        android:drawableLeft="@drawable/user_circle"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/zenkakugothicnew_medium"
+        android:hint="First Name"
+        android:padding="14dp"
+
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createAccount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

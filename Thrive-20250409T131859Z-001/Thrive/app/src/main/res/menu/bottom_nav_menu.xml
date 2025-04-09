@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:icon="@drawable/home_navigation"
+        android:id="@+id/home"/>
+    <item android:title="Jobs"
+        android:icon="@drawable/fontawesome_box_archive_icon"
+        android:id="@+id/jobs"/>
+    <item android:title="Upskilling"
+        android:icon="@drawable/book"
+        android:id="@+id/upskilling"/>
+    <item android:title="Resume"
+        android:icon="@drawable/resume_navigation"
+        android:id="@+id/resume"/>
+    <item android:title="Profile"
+        android:icon="@drawable/profile_navigation"
+        android:id="@+id/profile"/>
+</menu>

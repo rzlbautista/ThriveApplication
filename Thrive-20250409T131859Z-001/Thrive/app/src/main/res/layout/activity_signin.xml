@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_blue">
+
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="253dp"
+        android:layout_height="231dp"
+        android:layout_marginTop="68dp"
+        android:src="@drawable/thrive_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Main Card -->
+
+    <LinearLayout
+        android:layout_width="382dp"
+        android:layout_height="359dp"
+        android:background="@drawable/rounded_border"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="38dp"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp">
+
+
+    <ImageView
+            android:layout_width="42dp"
+            android:layout_height="31dp"
+            android:src="@drawable/id_card"
+            app:tint="@color/turquiose"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="What are you looking for?"
+            android:textColor="@color/black"
+            android:fontFamily="@font/zenkakugothicnew_medium"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Card Header -->
+
+            <!-- Options Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="32dp"
+                android:orientation="horizontal">
+
+                <!-- Job Seeker Option -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardJobSeeker"
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border_box"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginBottom="16dp"
+                            app:cardBackgroundColor="@color/selected_blue"
+                            app:cardCornerRadius="30dp">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/book"
+                                app:tint="@color/turquiose" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="I want a job"
+                            android:fontFamily="@font/zenkakugothicnew_medium"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Employer Option -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardEmployer"
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/border_box"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginBottom="16dp"
+                            app:cardBackgroundColor="@color/selected_blue"
+                            app:cardCornerRadius="30dp">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/user_alt"
+                                app:tint="@color/turquiose" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="I'm an employer"
+                            android:fontFamily="@font/zenkakugothicnew_medium"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="385dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="360dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
