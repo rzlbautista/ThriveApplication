@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Thrive</string>
+    <!-- res/values/strings.xml -->
+    <string name="get_started">Get Started</string>
+    <string name="empowering_abilities">Empowering Abilities, Redefining Possibilities</string>
+    <string name="thrive_logo_desc">Thrive logo</string>
+
+
+</resources>

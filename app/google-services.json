@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1036056232182",
+    "project_id": "thrive-674ae",
+    "storage_bucket": "thrive-674ae.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036056232182:android:35e32b3177a0fc7e4a6cd7",
+        "android_client_info": {
+          "package_name": "rizelle.bautista.thrive"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeXRi3Mr3TGuD4CI9VUH3En0tWC1-KpwY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
