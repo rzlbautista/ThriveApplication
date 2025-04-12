@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.Thrive" parent="Base.Theme.Thrive" />
+
+    <style name="DialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">800%
+        </item>
+        <item name ="android:windowMinWidthMinor">80%</item>
+    </style>
 </resources>

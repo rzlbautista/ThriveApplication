@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.app.Dialog;
+import android.content.Intent;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,25 +18,36 @@ public class JobSeekerSignupActivity extends AppCompatActivity {
     Button signupButton;
     FirebaseAuth mAuth;
 
+
+
+    CheckBox termsCheckbox;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_jobseeker_signup);  // Make sure this is correct
+        setContentView(R.layout.activity_jobseeker_signup);
+        if (getIntent().getBooleanExtra("terms_agreed", false)) {
+            termsCheckbox.setChecked(true);
+        }
 
 
-
-    mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
         firstnameEditText = findViewById(R.id.jobseeker_firstname);
         lastnameEditText = findViewById(R.id.jobseeker_lastname);
         emailEditText = findViewById(R.id.jobseeker_email);
         passwordEditText = findViewById(R.id.jobseeker_password);
+        usernameEditText = findViewById(R.id.jobseeker_email); // Make sure this is correct
         signupButton = findViewById(R.id.signUpButton);
+        termsCheckbox = findViewById(R.id.checkBox);
 
-        // Sign-up Button Click Listener
         signupButton.setOnClickListener(view -> {
-            String firstname = firstnameEditText.getText().toString().trim();
-            String lastname = lastnameEditText.getText().toString().trim();
+            if (!termsCheckbox.isChecked()) {
+                showWarningDialog();  // Show warning before proceeding
+                return;
+            }
+
+            // Your usual signup logic here...
             String email = usernameEditText.getText().toString().trim();
             String password = passwordEditText.getText().toString().trim();
 
@@ -47,19 +61,32 @@ public class JobSeekerSignupActivity extends AppCompatActivity {
                 return;
             }
 
-
-            // Create user with Firebase Authentication
             mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, task -> {
                         if (task.isSuccessful()) {
-                            // Sign-up success, navigate to job seeker dashboard
-                            Toast.makeText(JobSeekerSignupActivity.this, "Account Created Successfully!", Toast.LENGTH_SHORT).show();
-                            finish();  // Close the signup activity
+                            Toast.makeText(this, "Account Created Successfully!", Toast.LENGTH_SHORT).show();
+                            finish();
                         } else {
-                            // If sign-up fails, display a message to the user
-                            Toast.makeText(JobSeekerSignupActivity.this, "Authentication Failed: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(this, "Authentication Failed: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                         }
                     });
         });
     }
+
+    private void showWarningDialog() {
+        Dialog dialog = new Dialog(this, R.style.DialogStyle);
+        dialog.setContentView(R.layout.activity_warning_message_create_account);
+        dialog.getWindow().setBackgroundDrawableResource(R.drawable.bg_window);
+
+        Button continueBtn = dialog.findViewById(R.id.btn_continue);
+        continueBtn.setOnClickListener(v -> {
+            dialog.dismiss();
+            Intent intent = new Intent(JobSeekerSignupActivity.this, TermsAndConditionsActivity.class);
+            startActivity(intent);
+        });
+
+        dialog.show();
+    }
+
+
 }
