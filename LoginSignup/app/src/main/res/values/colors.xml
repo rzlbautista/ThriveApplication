@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#252526</color>
+
+    <color name="black1E2634">#1E2634</color>
+    <color name="black_transparent">#99000000</color>
+
+    <!-- Shades of grey -->
+    <color name="gray808080">#808080</color>
+    <color name="gray252526">#252526</color>
+
+
+    <!-- Blues -->
+    <color name="pale_blue">#F4F4F9</color>
+    <color name="button_color">#2546F0</color>
+    <color name="blue">#2546F0</color>
+    <color name="bluey">#1931A6</color>
+
+    <!--Green range -->
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+
+    <!-- Purple Range -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="lavender">#8692f7</color>
+
+    <color name="light_blue">#B3C2F5</color>
+    <color name="fellow_blue">#3800BB</color>
+
+
+    <color name="blue_100">#DBEAFE</color>
+    <color name="cyan_800">#155E75</color>
+    <color name="violet_100">#F3E8FF</color>
+    <color name="selected_blue">#D4E4FD</color>
+    <color name="background_blue">#E9ECFD</color>
+    <color name="turquiose">#1F5583</color>
+    <color name="button_create">#B3C2F5</color>
+
+</resources>

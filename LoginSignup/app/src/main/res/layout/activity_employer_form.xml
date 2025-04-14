@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_blue"
+    tools:layout_editor_absoluteX="6dp"
+    tools:layout_editor_absoluteY="62dp">
+
+    <TextView
+        android:id="@+id/createAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/paytone_one"
+        android:text="Employer Information"
+        android:textColor="@color/button_color"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etFirstName"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/rounded_border"
+        android:drawableLeft="@drawable/user_circle"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/zen_kaku_gothic_new_medium"
+        android:hint="First Name"
+        android:padding="14dp"
+
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createAccount" />
+
+    <EditText
+        android:id="@+id/etLastName"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/rounded_border"
+        android:drawableLeft="@drawable/user_circle"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/zen_kaku_gothic_new_medium"
+        android:hint="Last Name"
+        android:padding="15dp"
+
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etFirstName" />
+
+    <EditText
+        android:id="@+id/etContactNumber"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/rounded_border"
+        android:drawableLeft="@drawable/email"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/zen_kaku_gothic_new_medium"
+        android:hint="Contact Information"
+        android:padding="15dp"
+
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etLastName" />
+
+    <EditText
+        android:id="@+id/etCompanyName"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/rounded_border"
+        android:drawableLeft="@drawable/company_name"
+        android:drawablePadding="7dp"
+        android:fontFamily="@font/zen_kaku_gothic_new_medium"
+        android:hint="Company Name"
+        android:padding="15dp"
+
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etContactNumber" />
+
+    <EditText
+        android:id="@+id/etCompanyEmail"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/rounded_border"
+        android:drawableLeft="@drawable/email"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/zen_kaku_gothic_new_medium"
+        android:hint="Company Email"
+        android:padding="15dp"
+
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCompanyName" />
+
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="310dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="52dp"
+        android:backgroundTint="@color/button_color"
+        android:text="Confirm"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etCompanyEmail" />
+
+    <Button
+        android:id="@+id/btnReturnLoginButton"
+        android:layout_width="310dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="52dp"
+        android:backgroundTint="@color/button_create"
+        android:text="Return to login"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubmit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
