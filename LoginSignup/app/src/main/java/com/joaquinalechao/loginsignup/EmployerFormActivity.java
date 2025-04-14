@@ -6,6 +6,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
+import android.app.AlertDialog;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
+import android.widget.TextView;
+import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.AuthCredential;
@@ -24,6 +32,8 @@ public class EmployerFormActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     private FirebaseFirestore db;
     private String userEmail, userPassword, googleIdToken, userType;
+
+    private TextView tvTerms;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +59,24 @@ public class EmployerFormActivity extends AppCompatActivity {
         submitButton = findViewById(R.id.btnSubmit);
         returnLoginButton = findViewById(R.id.btnReturnLoginButton);
 
+        tvTerms = findViewById(R.id.tvTerms);
+        String termsText = "By creating an account, you agree to our Terms and Conditions.";
+        SpannableString ss = new SpannableString(termsText);
+
+        ClickableSpan clickableSpan = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                showTermsPopup();
+            }
+        };
+
+        int start = termsText.indexOf("Terms and Conditions");
+        int end = start + "Terms and Conditions".length();
+        ss.setSpan(clickableSpan, start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        tvTerms.setText(ss);
+        tvTerms.setMovementMethod(LinkMovementMethod.getInstance());
+
         // Submit button action
         submitButton.setOnClickListener(v -> finalizeSignup());
 
@@ -58,7 +86,13 @@ public class EmployerFormActivity extends AppCompatActivity {
             finish();
         });
     }
-
+    private void showTermsPopup() {
+        new AlertDialog.Builder(this)
+                .setTitle("Terms and Conditions")
+                .setMessage("Thrive may collect and store user data to improve app functionality.\n\n By using the app, you consent to data collection as outlined in our Privacy Policy. \n The app may integrate third-party services or links. Thrive is not responsible for the content or practices of these services.\n\nTo use Thrive, you must:\n• Be a registered user with valid credentials (e.g., email, PWD ID, or other identification).\n• Be at least 18 years old or have parental consent if under 18.")
+                .setPositiveButton("OK", null)
+                .show();
+    }
     private void finalizeSignup() {
         String fName = firstName.getText().toString().trim();
         String lName = lastName.getText().toString().trim();

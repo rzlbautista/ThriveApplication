@@ -106,6 +106,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <TextView
+        android:id="@+id/tvTerms"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:text="By creating an account, you agree to our Terms and Conditions."
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:autoLink="none"
+        app:layout_constraintTop_toBottomOf="@id/contact_number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <!-- Submit Button -->
     <Button
         android:id="@+id/btnSubmitButton"
@@ -116,7 +133,7 @@
         android:textColor="@color/white"
         android:backgroundTint="@color/button_color"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/contact_number"
+        app:layout_constraintTop_toBottomOf="@id/tvTerms"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
